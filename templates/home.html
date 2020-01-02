@@ -1,0 +1,17 @@
+{%  extends "base.html" %}
+
+{% block head_title %}My Home Page {% endblock%}
+
+{% block content %} 
+{{ title }}
+{{request.user}}
+{{ request.path}}
+{{ user.is_authenticated}}
+
+
+<h1>User only data</h1>
+    {% for a in my_list %}
+        <li> {{a}}</li>
+    {% endfor%}
+
+{% endblock%}
